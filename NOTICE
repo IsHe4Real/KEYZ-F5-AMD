@@ -1,0 +1,20 @@
+KEYZ-F5-AMD experimental runtime
+
+Based on F5-TTS by SWivid and the community F5-TTS-ONNX conversion by DakeQQ.
+This is an independent runtime project, not an official AMD, Microsoft, SWivid
+or DakeQQ release. No claim of employment or upstream co-authorship is made.
+
+Algorithm reference: DakeQQ/F5-TTS-ONNX,
+commit 47173d5fe22eefd1adc4dab3b8829d227f307e29 (Apache-2.0).
+https://github.com/DakeQQ/F5-TTS-ONNX
+https://github.com/SWivid/F5-TTS
+
+Local adaptations include persistent sessions, separate DirectML input/output
+buffers, request validation, exact asset checks and a 13-step full-trajectory
+coarsened schedule. This schedule is experimental, not an official native
+EPSS export and not a model retraining or distillation claim.
+
+The Apache-2.0 code license does NOT relicense pretrained weights. Upstream
+F5-TTS describes pretrained weights as CC-BY-NC due to their training data.
+Respect the applicable model terms and obtain permission to use voice samples.
+No weights, voice samples, private transcripts or generated speech are shipped.

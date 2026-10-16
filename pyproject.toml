@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keyz-f5-amd"
+version = "0.1.0a1"
+description = "Experimental persistent 13-step F5 ONNX runtime for Windows AMD DirectML"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "numpy==2.5.4", "scipy==1.18.1", "soundfile==0.14.0",
+  "onnxruntime-directml==1.24.4; sys_platform == 'win32'", "onnx==1.23.2"
+]
+
+[project.scripts]
+keyz-f5 = "keyz_f5_amd.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
